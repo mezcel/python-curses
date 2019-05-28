@@ -1,5 +1,5 @@
 # python-curses 
-(stop spoint)
+(stop spoint) Only completed json for 1 mystery, the rest is UC.
 
 ### A python Rosary terminal app
 
