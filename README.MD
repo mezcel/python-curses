@@ -1,4 +1,4 @@
-# python-curses (wip stop spoint)
+# python-curses (stop spoint)
 
 ### A python Rosary terminal app
 
