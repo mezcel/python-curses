@@ -100,9 +100,8 @@ def navInput(myKeyPress, accumulatorInput):
 def navFwd(accumulatorInput):
 	accumulatorInput += 1
 
-	accumulatorMax=200
-	tmpMax = 236
-	if (accumulatorInput > tmpMax):
+	accumulatorMax=315
+	if (accumulatorInput > accumulatorMax):
 		accumulatorInput = 0
 
 	return accumulatorInput
@@ -111,8 +110,7 @@ def navRev(accumulatorInput):
 	accumulatorInput -= 1
 
 	accumulatorMin=0
-	if (accumulatorInput < 0):
-		#accumulatorInput = 200
-		accumulatorInput = 157
+	if (accumulatorInput < accumulatorMin):
+		accumulatorInput = 315
 
 	return accumulatorInput

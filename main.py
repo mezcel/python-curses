@@ -7,7 +7,7 @@ from mycontrolls import *
 from myvisualcontent import *
 
 ## global vars
-accumulator = 157 #0
+accumulator = 0
 screen = curses.initscr() #initialize the curses window
 
 '''

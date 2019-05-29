@@ -104,25 +104,38 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 		if ( int(jsonData['smallbeadPercent']) < 1):
 			smallbeadPercent = smallbeadPercent / 7.0
 			volumePercent = int(maxX * smallbeadPercent)
-			leftJustifyText( topRow + 2, "Introduction Progress:  0/0 beginning crucifix " + beadType)
+			#leftJustifyText( topRow + 2, "Introduction Progress:  0/0 beginning crucifix " + beadType)
+			screen.addstr(topRow + 2, 2, "Intro. Progress:" )
+			screen.addstr(topRow + 2, 22, "start")
 		elif (mysteryPercent == 50 ):
 			volumePercent = maxX
-			leftJustifyText( topRow + 2, "Conclusion Progress:  --/-- Conclusion Prayers " + beadType)
+			#leftJustifyText( topRow + 2, "Conclusion Progress:  --/-- Conclusion Prayers " + beadType)
+			screen.addstr(topRow + 2, 2, "Outro. Progress:" )
+			screen.addstr(topRow + 2, 22, "ending")
 		else:
 			smallbeadPercent = smallbeadPercent / 7.0
 			volumePercent = int(maxX * smallbeadPercent)
-			leftJustifyText( topRow + 2, "Introduction Progress:  " + str(jsonData['smallbeadPercent']) + "/7 " + beadType)
+			#leftJustifyText( topRow + 2, "Introduction Progress:  " + str(jsonData['smallbeadPercent']) + "/7 " + beadType)
+			screen.addstr(topRow + 2, 2, "Intro. Progress:" )
+			screen.addstr(topRow + 2, 22, str(jsonData['smallbeadPercent']) + "/7")
 	else:
 		smallbeadPercent = smallbeadPercent / 10.0
 		volumePercent = int(maxX * smallbeadPercent)
-		leftJustifyText( topRow + 2, "Decade Progress:  " + str(jsonData['smallbeadPercent']) + "/10 " + beadType)
+		#leftJustifyText( topRow + 2, "Decade Progress:  " + str(jsonData['smallbeadPercent']) + "/10 " + beadType)
+		screen.addstr(topRow + 2, 2, "Decade Progress:" )
+		screen.addstr(topRow + 2, 22, str(jsonData['smallbeadPercent'])  + "/10")
 
+	screen.addstr(topRow + 2, 30, beadType )
 	rightJustifyText(topRow + 2, maxX, prayerName)
 	progressBar( topRow + 3, volumePercent)
 
 	## Mystery Total Progress Display
 
-	leftJustifyText( topRow + 5, "Mystery Progress: " + str(jsonData['mysteryPercent']) + "/50 " +  mysteryName )
+	#leftJustifyText( topRow + 5, "Mystery Progress: " + str(jsonData['mysteryPercent']) + "/50 " +  mysteryName )
+	screen.addstr(topRow + 5, 2, "Mystery Progress:" )
+	screen.addstr(topRow + 5, 22, str(jsonData['mysteryPercent']) + "/50")
+	screen.addstr(topRow + 5, 30, mysteryName )
+
 	rightJustifyText(topRow + 5, maxX, decadeName)
 	mysteryPercent = mysteryPercent / 50.0
 	volumePercent = int(maxX * mysteryPercent )

@@ -2614,7 +2614,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 1,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 238,
 			"beadIndex": 6,
@@ -2622,7 +2625,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 2,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 239,
 			"beadIndex": 3,
@@ -2630,7 +2636,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 240,
 			"beadIndex": 2,
@@ -2638,7 +2647,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 4,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 241,
 			"beadIndex": 2,
@@ -2646,7 +2658,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 4,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 242,
 			"beadIndex": 2,
@@ -2654,7 +2669,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 4,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 243,
 			"beadIndex": 3,
@@ -2662,7 +2680,10 @@
 			"mysteryIndex": 0,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 244,
 			"beadIndex": 5,
@@ -2670,7 +2691,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 0,
 			"scriptureIndex": 0,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 0,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 0
 		}, {
 			"rosaryBeadID": 245,
 			"beadIndex": 3,
@@ -2678,7 +2702,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 1
 		}, {
 			"rosaryBeadID": 246,
 			"beadIndex": 2,
@@ -2686,7 +2713,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 151,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 1
 		}, {
 			"rosaryBeadID": 247,
 			"beadIndex": 2,
@@ -2694,7 +2724,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 152,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 2
 		}, {
 			"rosaryBeadID": 248,
 			"beadIndex": 2,
@@ -2702,7 +2735,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 153,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 3
 		}, {
 			"rosaryBeadID": 249,
 			"beadIndex": 2,
@@ -2710,7 +2746,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 154,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 4
 		}, {
 			"rosaryBeadID": 250,
 			"beadIndex": 2,
@@ -2718,7 +2757,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 155,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 5
 		}, {
 			"rosaryBeadID": 251,
 			"beadIndex": 2,
@@ -2726,7 +2768,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 156,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 6
 		}, {
 			"rosaryBeadID": 252,
 			"beadIndex": 2,
@@ -2734,7 +2779,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 157,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 7
 		}, {
 			"rosaryBeadID": 253,
 			"beadIndex": 2,
@@ -2742,7 +2790,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 158,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 8,
+			"mysteryPercent": 8
 		}, {
 			"rosaryBeadID": 254,
 			"beadIndex": 2,
@@ -2750,7 +2801,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 159,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 9,
+			"mysteryPercent": 9
 		}, {
 			"rosaryBeadID": 255,
 			"beadIndex": 2,
@@ -2758,7 +2812,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 160,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 10
 		}, {
 			"rosaryBeadID": 256,
 			"beadIndex": 4,
@@ -2766,7 +2823,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 10
 		}, {
 			"rosaryBeadID": 257,
 			"beadIndex": 4,
@@ -2774,7 +2834,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 6,
 			"scriptureIndex": 0,
-			"messageIndex": 16
+			"messageIndex": 16,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 10
 		}, {
 			"rosaryBeadID": 258,
 			"beadIndex": 3,
@@ -2782,7 +2845,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 0,
 			"scriptureIndex": 0,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 11
 		}, {
 			"rosaryBeadID": 259,
 			"beadIndex": 3,
@@ -2790,7 +2856,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 11
 		}, {
 			"rosaryBeadID": 260,
 			"beadIndex": 2,
@@ -2798,7 +2867,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 161,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 11
 		}, {
 			"rosaryBeadID": 261,
 			"beadIndex": 2,
@@ -2806,7 +2878,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 162,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 12
 		}, {
 			"rosaryBeadID": 262,
 			"beadIndex": 2,
@@ -2814,7 +2889,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 163,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 13
 		}, {
 			"rosaryBeadID": 263,
 			"beadIndex": 2,
@@ -2822,7 +2900,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 164,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 14
 		}, {
 			"rosaryBeadID": 264,
 			"beadIndex": 2,
@@ -2830,7 +2911,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 165,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 15
 		}, {
 			"rosaryBeadID": 265,
 			"beadIndex": 2,
@@ -2838,7 +2922,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 166,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 16
 		}, {
 			"rosaryBeadID": 266,
 			"beadIndex": 2,
@@ -2846,7 +2933,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 167,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 17
 		}, {
 			"rosaryBeadID": 267,
 			"beadIndex": 2,
@@ -2854,7 +2944,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 168,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 8,
+			"mysteryPercent": 18
 		}, {
 			"rosaryBeadID": 268,
 			"beadIndex": 2,
@@ -2862,7 +2955,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 169,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 9,
+			"mysteryPercent": 19
 		}, {
 			"rosaryBeadID": 269,
 			"beadIndex": 2,
@@ -2870,7 +2966,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 170,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 20
 		}, {
 			"rosaryBeadID": 270,
 			"beadIndex": 4,
@@ -2878,7 +2977,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 20
 		}, {
 			"rosaryBeadID": 271,
 			"beadIndex": 4,
@@ -2886,7 +2988,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 6,
 			"scriptureIndex": 0,
-			"messageIndex": 17
+			"messageIndex": 17,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 20
 		}, {
 			"rosaryBeadID": 272,
 			"beadIndex": 3,
@@ -2894,7 +2999,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 0,
 			"scriptureIndex": 0,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 21
 		}, {
 			"rosaryBeadID": 273,
 			"beadIndex": 3,
@@ -2902,7 +3010,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 21
 		}, {
 			"rosaryBeadID": 274,
 			"beadIndex": 2,
@@ -2910,7 +3021,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 171,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 21
 		}, {
 			"rosaryBeadID": 275,
 			"beadIndex": 2,
@@ -2918,7 +3032,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 172,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 22
 		}, {
 			"rosaryBeadID": 276,
 			"beadIndex": 2,
@@ -2926,7 +3043,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 173,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 23
 		}, {
 			"rosaryBeadID": 277,
 			"beadIndex": 2,
@@ -2934,7 +3054,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 174,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 24
 		}, {
 			"rosaryBeadID": 278,
 			"beadIndex": 2,
@@ -2942,7 +3065,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 175,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 25
 		}, {
 			"rosaryBeadID": 279,
 			"beadIndex": 2,
@@ -2950,7 +3076,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 176,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 26
 		}, {
 			"rosaryBeadID": 280,
 			"beadIndex": 2,
@@ -2958,7 +3087,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 177,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 27
 		}, {
 			"rosaryBeadID": 281,
 			"beadIndex": 2,
@@ -2966,7 +3098,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 178,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 8,
+			"mysteryPercent": 28
 		}, {
 			"rosaryBeadID": 282,
 			"beadIndex": 2,
@@ -2974,7 +3109,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 179,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 9,
+			"mysteryPercent": 29
 		}, {
 			"rosaryBeadID": 283,
 			"beadIndex": 2,
@@ -2982,7 +3120,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 180,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 30
 		}, {
 			"rosaryBeadID": 284,
 			"beadIndex": 4,
@@ -2990,7 +3131,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 30
 		}, {
 			"rosaryBeadID": 285,
 			"beadIndex": 4,
@@ -2998,7 +3142,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 6,
 			"scriptureIndex": 0,
-			"messageIndex": 18
+			"messageIndex": 18,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 30
 		}, {
 			"rosaryBeadID": 286,
 			"beadIndex": 3,
@@ -3006,7 +3153,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 0,
 			"scriptureIndex": 0,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 31
 		}, {
 			"rosaryBeadID": 287,
 			"beadIndex": 3,
@@ -3014,7 +3164,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 31
 		}, {
 			"rosaryBeadID": 288,
 			"beadIndex": 2,
@@ -3022,7 +3175,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 181,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 31
 		}, {
 			"rosaryBeadID": 289,
 			"beadIndex": 2,
@@ -3030,7 +3186,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 182,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 32
 		}, {
 			"rosaryBeadID": 290,
 			"beadIndex": 2,
@@ -3038,7 +3197,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 183,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 33
 		}, {
 			"rosaryBeadID": 291,
 			"beadIndex": 2,
@@ -3046,7 +3208,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 184,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 34
 		}, {
 			"rosaryBeadID": 292,
 			"beadIndex": 2,
@@ -3054,7 +3219,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 185,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 35
 		}, {
 			"rosaryBeadID": 293,
 			"beadIndex": 2,
@@ -3062,7 +3230,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 186,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 36
 		}, {
 			"rosaryBeadID": 294,
 			"beadIndex": 2,
@@ -3070,7 +3241,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 187,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 37
 		}, {
 			"rosaryBeadID": 295,
 			"beadIndex": 2,
@@ -3078,7 +3252,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 188,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 8,
+			"mysteryPercent": 38
 		}, {
 			"rosaryBeadID": 296,
 			"beadIndex": 2,
@@ -3086,7 +3263,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 189,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 9,
+			"mysteryPercent": 39
 		}, {
 			"rosaryBeadID": 297,
 			"beadIndex": 2,
@@ -3094,7 +3274,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 190,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 40
 		}, {
 			"rosaryBeadID": 298,
 			"beadIndex": 4,
@@ -3102,7 +3285,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 40
 		}, {
 			"rosaryBeadID": 299,
 			"beadIndex": 4,
@@ -3110,7 +3296,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 6,
 			"scriptureIndex": 0,
-			"messageIndex": 19
+			"messageIndex": 19,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 40
 		}, {
 			"rosaryBeadID": 300,
 			"beadIndex": 3,
@@ -3118,7 +3307,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 0,
 			"scriptureIndex": 0,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 41
 		}, {
 			"rosaryBeadID": 301,
 			"beadIndex": 3,
@@ -3126,7 +3318,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 3,
 			"scriptureIndex": 0,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 0,
+			"mysteryPercent": 41
 		}, {
 			"rosaryBeadID": 302,
 			"beadIndex": 2,
@@ -3134,7 +3329,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 191,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 1,
+			"mysteryPercent": 41
 		}, {
 			"rosaryBeadID": 303,
 			"beadIndex": 2,
@@ -3142,7 +3340,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 192,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 2,
+			"mysteryPercent": 42
 		}, {
 			"rosaryBeadID": 304,
 			"beadIndex": 2,
@@ -3150,7 +3351,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 193,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 3,
+			"mysteryPercent": 43
 		}, {
 			"rosaryBeadID": 305,
 			"beadIndex": 2,
@@ -3158,7 +3362,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 194,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 4,
+			"mysteryPercent": 44
 		}, {
 			"rosaryBeadID": 306,
 			"beadIndex": 2,
@@ -3166,7 +3373,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 195,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 5,
+			"mysteryPercent": 45
 		}, {
 			"rosaryBeadID": 307,
 			"beadIndex": 2,
@@ -3174,7 +3384,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 196,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 6,
+			"mysteryPercent": 46
 		}, {
 			"rosaryBeadID": 308,
 			"beadIndex": 2,
@@ -3182,7 +3395,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 197,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 7,
+			"mysteryPercent": 47
 		}, {
 			"rosaryBeadID": 309,
 			"beadIndex": 2,
@@ -3190,7 +3406,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 198,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 8,
+			"mysteryPercent": 48
 		}, {
 			"rosaryBeadID": 310,
 			"beadIndex": 2,
@@ -3198,7 +3417,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 199,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 9,
+			"mysteryPercent": 49
 		}, {
 			"rosaryBeadID": 311,
 			"beadIndex": 2,
@@ -3206,7 +3428,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 4,
 			"scriptureIndex": 200,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 312,
 			"beadIndex": 4,
@@ -3214,7 +3439,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 5,
 			"scriptureIndex": 0,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 313,
 			"beadIndex": 4,
@@ -3222,7 +3450,10 @@
 			"mysteryIndex": 4,
 			"prayerIndex": 6,
 			"scriptureIndex": 0,
-			"messageIndex": 20
+			"messageIndex": 20,
+			"loopBody": 1,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 314,
 			"beadIndex": 5,
@@ -3230,7 +3461,10 @@
 			"mysteryIndex": 5,
 			"prayerIndex": 7,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 315,
 			"beadIndex": 5,
@@ -3238,7 +3472,10 @@
 			"mysteryIndex": 5,
 			"prayerIndex": 8,
 			"scriptureIndex": 0,
-			"messageIndex": 0
+			"messageIndex": 0,
+			"loopBody": 0,
+			"smallbeadPercent": 10,
+			"mysteryPercent": 50
 		}
 	],
 	"bead": [
