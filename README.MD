@@ -1,6 +1,6 @@
-# python-curses 
+# python-curses
 
-A Python CLI/terminal application which cycles through a scriptural Rosary. 
+A Python CLI/terminal application which cycles through a scriptural Rosary.
 Displayed text content is  provided by a .json file.
 
 * based on the [jq-tput-terminal](https://github.com/mezcel/jq-tput-terminal) UI layout
@@ -33,9 +33,9 @@ sudo pacman -S --needed python python2
 
 ### Win10
 
-I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows/). I think all the cool kids are on v3, idk
+I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows/).
 
-Install "with Environment Variables" when the installer makes it abaile to do so. If not... you will manually have to do all of that stuff.
+For runtime convenience, install "with environment variables" selected.
 
 Install curses library:
 ```ps1

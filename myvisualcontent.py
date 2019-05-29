@@ -3,6 +3,7 @@
 
 import datetime
 
+## my modules
 from mycontrolls import *
 from main import screen
 
@@ -28,6 +29,20 @@ def myHR(row, maxX):
 	rowlength = maxX - 2
 	for col in range(rowlength):
 		screen.addstr(row, (col + 1), '.')
+
+def decadeProgressInfo(maxX, maxY, decadeLabel, decadeFraction, beadType, prayerName):
+	topRow = maxY - 8
+	screen.addstr(topRow + 2, 2, decadeLabel )
+	screen.addstr(topRow + 2, 22, decadeFraction)
+	screen.addstr(topRow + 2, 30, beadType )
+	rightJustifyText(topRow + 2, maxX, prayerName)
+
+def mysteryProgressInfo(maxX, maxY, mysteryLabel, mysteryFraction, mysteryName, decadeName):
+	topRow = maxY - 8
+	screen.addstr(topRow + 5, 2, mysteryLabel )
+	screen.addstr(topRow + 5, 22, mysteryFraction)
+	screen.addstr(topRow + 5, 30, mysteryName )
+	rightJustifyText(topRow + 5, maxX, decadeName)
 
 def progressBar(row, volumePercent):
 	rowlength = volumePercent - 4
@@ -59,27 +74,27 @@ def bodyDisplay(json, maxX, maxY, jsonData):
 	valuePadding = 4
 
 	row = 4
-	screen.addstr(row, labelPadding, "[Mystery Name]:")
+	screen.addstr(row, labelPadding, "_Mystery Name_:")
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryName'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "[Mystery Decade]:" )
+	screen.addstr(row, labelPadding, "_Mystery Decade_:" )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryDecade'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "[Mystery Message]:" )
+	screen.addstr(row, labelPadding, "_Mystery Message_:" )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mesageText'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "[Scripture Text]:" )
+	screen.addstr(row, labelPadding, "_Scripture Text_:" )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['scriptureText'] )
 
 	row += 4
-	screen.addstr(row, labelPadding, "[Prayer Text]:" )
+	screen.addstr(row, labelPadding, "_Prayer Text_:" )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['prayerText'] )
 
@@ -89,6 +104,8 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 
 	smallbeadPercent = int(jsonData['smallbeadPercent'])
 	mysteryPercent = int(jsonData['mysteryPercent'])
+	isBodyLoop = int(jsonData['loopBody'])
+
 	beadType = str(jsonData['beadType'])
 	prayerName = str(jsonData['prayerName'])
 	decadeName = str(jsonData['mysteryDecade'])
@@ -99,44 +116,34 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 
 	## Decade and Bead Progress Display
 
-	isBodyLoop = int(jsonData['loopBody'])
+	decadeLabel = "Decade Progress:"
+	decadeFraction = str(smallbeadPercent) + "/10"
+	volumePercent = int(maxX * (smallbeadPercent / 10.0) )
+
 	if (isBodyLoop == 0 ):
 		if ( int(jsonData['smallbeadPercent']) < 1):
-			smallbeadPercent = smallbeadPercent / 7.0
-			volumePercent = int(maxX * smallbeadPercent)
-			#leftJustifyText( topRow + 2, "Introduction Progress:  0/0 beginning crucifix " + beadType)
-			screen.addstr(topRow + 2, 2, "Intro. Progress:" )
-			screen.addstr(topRow + 2, 22, "start")
+			volumePercent = int(maxX * (smallbeadPercent / 7.0) )
+			decadeLabel = "Intro. Progress:"
+			decadeFraction = "start"
 		elif (mysteryPercent == 50 ):
-			volumePercent = maxX
-			#leftJustifyText( topRow + 2, "Conclusion Progress:  --/-- Conclusion Prayers " + beadType)
-			screen.addstr(topRow + 2, 2, "Outro. Progress:" )
-			screen.addstr(topRow + 2, 22, "ending")
+			#volumePercent = maxX
+			decadeLabel = "Outro. Progress:"
+			decadeFraction = "ending"
 		else:
-			smallbeadPercent = smallbeadPercent / 7.0
-			volumePercent = int(maxX * smallbeadPercent)
-			#leftJustifyText( topRow + 2, "Introduction Progress:  " + str(jsonData['smallbeadPercent']) + "/7 " + beadType)
-			screen.addstr(topRow + 2, 2, "Intro. Progress:" )
-			screen.addstr(topRow + 2, 22, str(jsonData['smallbeadPercent']) + "/7")
-	else:
-		smallbeadPercent = smallbeadPercent / 10.0
-		volumePercent = int(maxX * smallbeadPercent)
-		#leftJustifyText( topRow + 2, "Decade Progress:  " + str(jsonData['smallbeadPercent']) + "/10 " + beadType)
-		screen.addstr(topRow + 2, 2, "Decade Progress:" )
-		screen.addstr(topRow + 2, 22, str(jsonData['smallbeadPercent'])  + "/10")
+			volumePercent = int(maxX * (smallbeadPercent / 7.0) )
+			decadeLabel = "Intro. Progress:"
+			decadeFraction = str(smallbeadPercent) + "/7"
 
-	screen.addstr(topRow + 2, 30, beadType )
-	rightJustifyText(topRow + 2, maxX, prayerName)
+	decadeProgressInfo(maxX, maxY, decadeLabel, decadeFraction, beadType, prayerName)
 	progressBar( topRow + 3, volumePercent)
 
 	## Mystery Total Progress Display
 
-	#leftJustifyText( topRow + 5, "Mystery Progress: " + str(jsonData['mysteryPercent']) + "/50 " +  mysteryName )
-	screen.addstr(topRow + 5, 2, "Mystery Progress:" )
-	screen.addstr(topRow + 5, 22, str(jsonData['mysteryPercent']) + "/50")
-	screen.addstr(topRow + 5, 30, mysteryName )
+	mysteryLabel = "Mystery Progress:"
+	mysteryFraction = str(mysteryPercent) + "/50"
 
-	rightJustifyText(topRow + 5, maxX, decadeName)
+	mysteryProgressInfo(maxX, maxY, mysteryLabel, mysteryFraction, mysteryName, decadeName)
+
 	mysteryPercent = mysteryPercent / 50.0
 	volumePercent = int(maxX * mysteryPercent )
 	progressBar( topRow + 6, volumePercent)

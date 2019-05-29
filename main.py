@@ -3,6 +3,7 @@
 import os
 import curses
 
+## my modules
 from mycontrolls import *
 from myvisualcontent import *
 

@@ -856,7 +856,7 @@
 			"scriptureIndex": 0,
 			"messageIndex": 0,
 			"loopBody": 0,
-			"smallbeadPercent": 10,
+			"smallbeadPercent": 5,
 			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 78,
@@ -1725,7 +1725,7 @@
 			"scriptureIndex": 0,
 			"messageIndex": 0,
 			"loopBody": 0,
-			"smallbeadPercent": 10,
+			"smallbeadPercent": 5,
 			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 157,
@@ -2594,7 +2594,7 @@
 			"scriptureIndex": 0,
 			"messageIndex": 0,
 			"loopBody": 0,
-			"smallbeadPercent": 10,
+			"smallbeadPercent": 5,
 			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 236,
@@ -3463,7 +3463,7 @@
 			"scriptureIndex": 0,
 			"messageIndex": 0,
 			"loopBody": 0,
-			"smallbeadPercent": 10,
+			"smallbeadPercent": 5,
 			"mysteryPercent": 50
 		}, {
 			"rosaryBeadID": 315,
