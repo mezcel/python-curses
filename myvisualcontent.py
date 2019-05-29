@@ -147,3 +147,9 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 	mysteryPercent = mysteryPercent / 50.0
 	volumePercent = int(maxX * mysteryPercent )
 	progressBar( topRow + 6, volumePercent)
+
+def controllInstruction():
+	screen.addstr(0, 2, "Instructions:")
+	screen.addstr(2, 2, "* press the right/left arrow keys to navigate forward/reverse.")
+	screen.addstr(3, 2, "* press Q to quit")
+	screen.addstr(5, 2, "(press any key to continue)")

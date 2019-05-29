@@ -89,23 +89,15 @@ def jsonView(json, accumulator, jsonDB):
 
 def navInput(myKeyPress, accumulatorInput):
 	switcher = {
-		10: navFwd(accumulatorInput),	## enter
 		261: navFwd(accumulatorInput),	## rt arrow
 		260: navRev(accumulatorInput),	## lt arrow
-		263: navRev(accumulatorInput)	## backspace
 	}
 
 	''' Other key-bindings:
-		up=259
-		down=258
-		h=104
-		j=106
-		k=107
-		l=108
-		space=328
-		n=110
-		v=118
-		p=112
+		up=259, down=258
+		h=104, j=106, k=107, l=108
+		space=328, enter=10, backspace=263
+		n=110, v=118, p=112
 	'''
 
 	return switcher.get(myKeyPress, accumulatorInput)
@@ -127,3 +119,5 @@ def navRev(accumulatorInput):
 		accumulatorInput = 315
 
 	return accumulatorInput
+
+
