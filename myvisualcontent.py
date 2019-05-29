@@ -107,7 +107,7 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 			leftJustifyText( topRow + 2, "Introduction Progress:  0/0 beginning crucifix " + beadType)
 		elif (mysteryPercent == 50 ):
 			volumePercent = maxX
-			leftJustifyText( topRow + 2, "Conclusion Progress:  10/10 Conclusion Prayers " + beadType)
+			leftJustifyText( topRow + 2, "Conclusion Progress:  --/-- Conclusion Prayers " + beadType)
 		else:
 			smallbeadPercent = smallbeadPercent / 7.0
 			volumePercent = int(maxX * smallbeadPercent)

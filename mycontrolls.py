@@ -101,7 +101,7 @@ def navFwd(accumulatorInput):
 	accumulatorInput += 1
 
 	accumulatorMax=200
-	tmpMax = 157
+	tmpMax = 236
 	if (accumulatorInput > tmpMax):
 		accumulatorInput = 0
 
@@ -113,6 +113,6 @@ def navRev(accumulatorInput):
 	accumulatorMin=0
 	if (accumulatorInput < 0):
 		#accumulatorInput = 200
-		accumulatorInput = 79
+		accumulatorInput = 157
 
 	return accumulatorInput
