@@ -10,9 +10,9 @@ Displayed text content is  provided by a .json file.
 ### Libraries used:
 
 ```py
-import os			## computer control
+import os		## computer control
 import curses		## cli ui
-import json			## json parse
+import json		## json parse
 import datetime		## sys clock
 import textwrap		## wraping centence strings
 import platform		## identify which python version
