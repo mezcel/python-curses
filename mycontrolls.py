@@ -16,41 +16,6 @@ def importJsonFile(json, filePath):
 	json_str = json.dumps(data, ensure_ascii=False, encoding='utf8')
 	return json.loads(json_str)
 
-def rosaryTextJson(json, accumulator, jsonDB):
-
-	rosaryBeadID = accumulator
-
-	decadeIndexFK = int(jsonDB['rosaryBead'][rosaryBeadID]['decadeIndex'])
-	mysteryIndexFK = int(jsonDB['rosaryBead'][rosaryBeadID]['mysteryIndex'])
-	prayerIndexFK = int(jsonDB['rosaryBead'][rosaryBeadID]['prayerIndex'])
-	scriptureIndexFK = int(jsonDB['rosaryBead'][rosaryBeadID]['scriptureIndex'])
-	messageIndexFK = int(jsonDB['rosaryBead'][rosaryBeadID]['messageIndex'])
-
-	jsonOutput = {
-		"mysteryName": str(jsonDB['mystery'][mysteryIndexFK]['mysteryName']),
-		"mysteryDecade": str(jsonDB['decade'][decadeIndexFK]['decadeName']),
-		"message": str(jsonDB['message'][messageIndexFK]['mesageText']),
-		"scripture": str(jsonDB['scripture'][scriptureIndexFK]['scriptureText']),
-		"prayer": str(jsonDB['prayer'][prayerIndexFK]['prayerText'])
-	}
-
-	return jsonOutput
-
-def rosaryPositionJson(json, accumulator, jsonDB):
-	rosaryBeadID = accumulator
-
-	loopBody = int(jsonDB['rosaryBead'][rosaryBeadID]['loopBody'])
-	smallbeadPercent = int(jsonDB['rosaryBead'][rosaryBeadID]['smallbeadPercent'])
-	mysteryPercent = int(jsonDB['rosaryBead'][rosaryBeadID]['mysteryPercent'])
-
-	jsonOutput = {
-		"loopBody": str(loopBody),
-		"smallbeadPercent": str(smallbeadPercent),
-		"mysteryPercent": str(mysteryPercent)
-	}
-
-	return jsonOutput
-
 def jsonView(json, accumulator, jsonDB):
 	rosaryBeadID = accumulator
 
@@ -69,10 +34,12 @@ def jsonView(json, accumulator, jsonDB):
 
 	## Consolidated attribute view
 	jsonOutput = {
+		#"rosaryBeadID": str(rosaryBeadID), ## Debug
 		"beadType": str(jsonDB['bead'][beadIndexFK]['beadType']),
 		"mysteryName": str(jsonDB['mystery'][mysteryIndexFK]['mysteryName']),
 		"mysteryDecade": str(jsonDB['decade'][decadeIndexFK]['decadeName']),
 		"mesageText": str(jsonDB['message'][messageIndexFK]['mesageText']),
+		#"scriptureIndexFK": str(jsonDB['scripture'][scriptureIndexFK]['scriptureID']), ## Debug
 		"scriptureText": str(jsonDB['scripture'][scriptureIndexFK]['scriptureText']),
 		"prayerName": str(jsonDB['prayer'][prayerIndexFK]['prayerName']),
 		"prayerText": str(jsonDB['prayer'][prayerIndexFK]['prayerText']),
@@ -92,13 +59,6 @@ def navInput(myKeyPress, accumulatorInput):
 		261: navFwd(accumulatorInput),	## rt arrow
 		260: navRev(accumulatorInput),	## lt arrow
 	}
-
-	''' Other key-bindings:
-		up=259, down=258
-		h=104, j=106, k=107, l=108
-		space=328, enter=10, backspace=263
-		n=110, v=118, p=112
-	'''
 
 	return switcher.get(myKeyPress, accumulatorInput)
 

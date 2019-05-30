@@ -86,7 +86,7 @@ def myMain():
 			curses.endwin()
 		elif (myKeyPress == curses.KEY_RESIZE):
 			screen.erase()
-		elif (myKeyPress <> 261 and myKeyPress <> 260):
+		elif (myKeyPress <> 261 and myKeyPress <> 260): ## rt/lt keys
 			screen.erase()
 			controllInstruction()
 			screen.getch()
@@ -94,4 +94,5 @@ def myMain():
 ## Run
 
 if __name__ == '__main__':
+
 	myMain()

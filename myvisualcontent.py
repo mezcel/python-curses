@@ -66,6 +66,7 @@ def headerTextblock(json, maxX, jsonData):
 
 	leftJustifyText( topPadding, "NAB - English" )
 	centerText( topPadding, maxX, "Python Terminal Rosary" )
+	# centerText( topPadding, maxX, "rosaryBeadID = " + str(jsonData['rosaryBeadID']) + ", scriptureID = " + str(jsonData['scriptureIndexFK']) ) ## Debug
 	rightJustifyText( topPadding, maxX, str(now) )
 	myHR( topPadding + 1, maxX )
 
@@ -160,6 +161,7 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 	progressBar( topRow + 6, volumePercent)
 
 def controllInstruction():
+
 	screen.addstr(0, 2, "Instructions:")
 	screen.addstr(2, 2, "* press the right/left arrow keys to navigate forward/reverse.")
 	screen.addstr(3, 2, "* press Q to quit")

@@ -14,6 +14,7 @@ import os
 import curses
 import json
 import datetime
+import textwrap
 ```
 
 ---
