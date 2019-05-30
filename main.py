@@ -15,6 +15,22 @@ screen = curses.initscr() #initialize the curses window
 ### Main Processes ############################################
 '''
 
+def minimumResize(maxY, maxX):
+
+	if (os.name == "posix"):
+		os.system("resize -s 40 140") ## Linux
+		screen.erase()
+		screen.refresh()
+
+	if (os.name == "nt"):
+		os.system("mode 140, 40") ## Win NT
+		screen.erase()
+		screen.addstr(1, 2, "Window is too small: ( The CLI needs to be larger before starting 'curses.initscr()' )")
+		screen.addstr(3, 2, "Current Window:" )
+		screen.addstr(3, 30, str(maxX) + " x " + str(maxX) )
+		screen.addstr(5, 2, "Required Minimum Window:" )
+		screen.addstr(5, 30, "140 x 40" )
+
 def initDisplay(curses):
 
 	## Configure global variables for Curses
@@ -22,13 +38,6 @@ def initDisplay(curses):
 	curses.cbreak() #disable line buffers to run the key press immediately
 	curses.curs_set(0)
 	screen.keypad(1) #enable keyboard use
-	#curses.start_color() #enable colors
-	#curses.init_pair(1, curses.COLOR_RED, curses.COLOR_WHITE)
-
-	## Bash resize
-	## resize -s 40 140 &>/dev/null
-	## stty rows 40
-	os.system("resize -s 40 140")
 
 def populateDisplay(jsonData):
 
@@ -36,19 +45,10 @@ def populateDisplay(jsonData):
 	maxY, maxX = screen.getmaxyx()
 
 	if ( (maxY < 40) or (maxX < 140) ):
-		os.system("resize -s 40 140") ## Bash resize
-		#screen.addstr(1, 2, "Window is too small: (Enlarge to continue)", curses.color_pair(1) )
-		screen.addstr(1, 2, "Window is too small: (Enlarge to continue)")
-		screen.addstr(3, 2, "Current Window:" )
-		screen.addstr(3, 30, str(maxX) + " x " + str(maxY) )
-		screen.addstr(5, 2, "Required Minimum Window:" )
-		screen.addstr(5, 30, "140 x 40" )
+		minimumResize(maxY, maxX)
 		return
 
 	screen.clear()
-
-	## screen border
-	screen.border('|', '|', '-', '-', '+', '+', '+', '+')
 
 	## header
 	headerTextblock(json, maxX, jsonData)
@@ -58,6 +58,9 @@ def populateDisplay(jsonData):
 
 	## footer
 	footerProgressBlock(json, maxX, maxY, jsonData)
+
+	## screen border
+	screen.border('|', '|', '-', '-', '+', '+', '+', '+')
 
 def myMain():
 
@@ -70,7 +73,7 @@ def myMain():
 	while (escape == False):
 
 		global accumulator
-		jsonData =jsonView(json, accumulator, jsonDB);
+		jsonData =jsonView(json, accumulator, jsonDB)
 
 		populateDisplay(jsonData)
 

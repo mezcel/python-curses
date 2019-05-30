@@ -2,6 +2,7 @@
 ## Populate Screen Display
 
 import datetime
+import textwrap
 
 ## my modules
 from mycontrolls import *
@@ -68,6 +69,16 @@ def headerTextblock(json, maxX, jsonData):
 	rightJustifyText( topPadding, maxX, str(now) )
 	myHR( topPadding + 1, maxX )
 
+def myWordWrap(row, sentenceString, maxX):
+
+	desiredLength = maxX - 6
+
+	wrapper = textwrap.TextWrapper(width=desiredLength)
+	wrapper.subsequent_indent = "  "
+	wrappedText = wrapper.fill(text=sentenceString)
+
+	screen.addstr(row, 4, wrappedText)
+
 def bodyDisplay(json, maxX, maxY, jsonData):
 
 	labelPadding = 2
@@ -91,12 +102,12 @@ def bodyDisplay(json, maxX, maxY, jsonData):
 	row += 2
 	screen.addstr(row, labelPadding, "_Scripture Text_:" )
 	row += 2
-	screen.addstr(row, valuePadding, jsonData['scriptureText'] )
+	myWordWrap(row, str(jsonData['scriptureText']), maxX)
 
 	row += 4
 	screen.addstr(row, labelPadding, "_Prayer Text_:" )
 	row += 2
-	screen.addstr(row, valuePadding, jsonData['prayerText'] )
+	myWordWrap(row, str(jsonData['prayerText']), maxX)
 
 def footerProgressBlock(json, maxX, maxY, jsonData):
 
