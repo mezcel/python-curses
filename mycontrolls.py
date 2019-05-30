@@ -2,19 +2,39 @@
 ## Data and Navigation Calculations
 
 import json
+import platform
 
 '''
 ### JSON ######################################################
 '''
 
-def importJsonFile(json, filePath):
+def importJsonFile2(json, filePath):
+	## Json for python 2.7
 
-	# , 'r'
 	with open(filePath, 'r') as json_file:
 		data = json.load(json_file)
 
 	json_str = json.dumps(data, ensure_ascii=False, encoding='utf8')
 	return json.loads(json_str)
+
+def importJsonFile3(json, filePath):
+	## Json for python 3.7
+
+    with open(filePath, encoding='utf-8') as data_file:
+        data = json.loads(data_file.read())
+
+    return data
+
+def importJsonFile(json, filePath):
+	pythonVersion = str(platform.python_version())
+	pythonVersion = int(pythonVersion[0])
+
+	if(pythonVersion == 2):
+		jsonOutput = importJsonFile2(json, filePath)
+	else:
+		jsonOutput = importJsonFile3(json, filePath)
+
+	return jsonOutput
 
 def jsonView(json, accumulator, jsonDB):
 	rosaryBeadID = accumulator
@@ -34,12 +54,10 @@ def jsonView(json, accumulator, jsonDB):
 
 	## Consolidated attribute view
 	jsonOutput = {
-		#"rosaryBeadID": str(rosaryBeadID), ## Debug
 		"beadType": str(jsonDB['bead'][beadIndexFK]['beadType']),
 		"mysteryName": str(jsonDB['mystery'][mysteryIndexFK]['mysteryName']),
 		"mysteryDecade": str(jsonDB['decade'][decadeIndexFK]['decadeName']),
 		"mesageText": str(jsonDB['message'][messageIndexFK]['mesageText']),
-		#"scriptureIndexFK": str(jsonDB['scripture'][scriptureIndexFK]['scriptureID']), ## Debug
 		"scriptureText": str(jsonDB['scripture'][scriptureIndexFK]['scriptureText']),
 		"prayerName": str(jsonDB['prayer'][prayerIndexFK]['prayerName']),
 		"prayerText": str(jsonDB['prayer'][prayerIndexFK]['prayerText']),
@@ -79,5 +97,3 @@ def navRev(accumulatorInput):
 		accumulatorInput = 315
 
 	return accumulatorInput
-
-

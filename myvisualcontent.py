@@ -4,6 +4,7 @@
 import datetime
 import textwrap
 
+
 ## my modules
 from mycontrolls import *
 from main import screen
@@ -15,7 +16,7 @@ from main import screen
 def centerText(row, maxX, myString):
 	strLen = len(myString)
 	startCol = (maxX / 2) - (strLen / 2)
-	screen.addstr(row, startCol, myString )
+	screen.addstr(row, int(startCol), myString )
 
 def leftJustifyText(row, myString):
 	startCol = 2
@@ -24,7 +25,7 @@ def leftJustifyText(row, myString):
 def rightJustifyText(row, maxX, myString):
 	strLen = len(myString)
 	startCol = (maxX - 2) - (strLen)
-	screen.addstr(row, startCol, myString )
+	screen.addstr(row, int(startCol), myString )
 
 def myHR(row, maxX):
 	rowlength = maxX - 2
@@ -66,7 +67,6 @@ def headerTextblock(json, maxX, jsonData):
 
 	leftJustifyText( topPadding, "NAB - English" )
 	centerText( topPadding, maxX, "Python Terminal Rosary" )
-	# centerText( topPadding, maxX, "rosaryBeadID = " + str(jsonData['rosaryBeadID']) + ", scriptureID = " + str(jsonData['scriptureIndexFK']) ) ## Debug
 	rightJustifyText( topPadding, maxX, str(now) )
 	myHR( topPadding + 1, maxX )
 

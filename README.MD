@@ -10,16 +10,19 @@ Displayed text content is  provided by a .json file.
 ### Libraries used:
 
 ```py
-import os
-import curses
-import json
-import datetime
-import textwrap
+import os			## computer control
+import curses		## cli ui
+import json			## json parse
+import datetime		## sys clock
+import textwrap		## wraping centence strings
+import platform		## identify which python version
 ```
 
 ---
 
-## Install Python
+## Install Python Platform
+
+There are some differences between Python v2.x and Python v3.x regarding parsing ```.json```, so I included both techniques within the code.
 
 ### Debian & WLS
 
