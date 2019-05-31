@@ -4,10 +4,10 @@
 import datetime
 import textwrap
 
-
 ## my modules
 from mycontrolls import *
 from main import screen
+#from main import highlightText
 
 '''
 ### Text Alignment ###########################################
@@ -80,33 +80,33 @@ def myWordWrap(row, sentenceString, maxX):
 
 	screen.addstr(row, 4, wrappedText)
 
-def bodyDisplay(json, maxX, maxY, jsonData):
+def bodyDisplay(json, maxX, maxY, jsonData, lblHighlight):
 
 	labelPadding = 2
 	valuePadding = 4
 
 	row = 4
-	screen.addstr(row, labelPadding, "_Mystery Name_:")
+	screen.addstr(row, labelPadding, "Mystery Name:", lblHighlight)
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryName'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "_Mystery Decade_:" )
+	screen.addstr(row, labelPadding, "Mystery Decade:", lblHighlight )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryDecade'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "_Mystery Message_:" )
+	screen.addstr(row, labelPadding, "Mystery Message:", lblHighlight )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mesageText'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "_Scripture Text_:" )
+	screen.addstr(row, labelPadding, "Scripture Text:", lblHighlight )
 	row += 2
 	myWordWrap(row, str(jsonData['scriptureText']), maxX)
 
 	row += 4
-	screen.addstr(row, labelPadding, "_Prayer Text_:" )
+	screen.addstr(row, labelPadding, "Prayer Text:", lblHighlight )
 	row += 2
 	myWordWrap(row, str(jsonData['prayerText']), maxX)
 
