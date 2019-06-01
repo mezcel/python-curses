@@ -3,6 +3,7 @@
 
 import json
 import platform
+import datetime
 
 '''
 ### JSON ######################################################
@@ -97,3 +98,21 @@ def navRev(accumulatorInput):
 		accumulatorInput = 315
 
 	return accumulatorInput
+
+def mysteryOfDay():
+	dayOfWeek = datetime.datetime.today().weekday() ##  Monday is 0 and Sunday is 6.
+
+	switcher = {
+		6: 237, 0: 0, 1: 158, 2: 237, 3: 79, 4: 158, 5: 0
+	}
+
+	return switcher.get(dayOfWeek, 0)
+
+def returnDateString():
+	dt = datetime.datetime.now().strftime("%d/%m/%Y")
+	day, month, year = (int(x) for x in dt.split('/'))
+	ans = datetime.date(year, month, day)
+
+	now = str(ans.strftime("%A")) + " " + str(day) + " " + str(ans.strftime("%b")) + " " + str(year)
+
+	return now

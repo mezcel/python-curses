@@ -1,13 +1,11 @@
 ## myvisualcontent.py ##
 ## Populate Screen Display
 
-import datetime
 import textwrap
 
 ## my modules
 from mycontrolls import *
 from main import screen
-#from main import highlightText
 
 '''
 ### Text Alignment ###########################################
@@ -59,11 +57,7 @@ def headerTextblock(json, maxX, jsonData):
 
 	topPadding = 1
 
-	dt = datetime.datetime.now().strftime("%d/%m/%Y")
-	day, month, year = (int(x) for x in dt.split('/'))
-	ans = datetime.date(year, month, day)
-
-	now = str(ans.strftime("%A")) + " " + str(day) + " " + str(ans.strftime("%b")) + " " + str(year)
+	now = returnDateString()
 
 	leftJustifyText( topPadding, "NAB - English" )
 	centerText( topPadding, maxX, "Python Terminal Rosary" )

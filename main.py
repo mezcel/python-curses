@@ -60,8 +60,6 @@ def populateDisplay(jsonData):
 	headerTextblock(json, maxX, jsonData)
 
 	## body
-	#curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE) #color pair 1
-	#lblHighlight = curses.color_pair(1)
 	lblHighlight = curses.A_UNDERLINE
 	bodyDisplay(json, maxX, maxY, jsonData, lblHighlight)
 
@@ -72,15 +70,17 @@ def populateDisplay(jsonData):
 	screen.border('|', '|', '-', '-', '+', '+', '+', '+')
 
 def myMain():
-	
+
 	jsonDB = importJsonFile(json, 'rosaryJSON-nab.json')
+
+	global accumulator
+	accumulator = int(mysteryOfDay())
 
 	escape = False
 	myKeyPress = "n/a"
 
 	while (escape == False):
 
-		global accumulator
 		jsonData =jsonView(json, accumulator, jsonDB)
 
 		populateDisplay(jsonData)
@@ -91,7 +91,7 @@ def myMain():
 		## q|Q is quit
 		if (myKeyPress == 113):
 			escape = True
-			screen.endwin()
+			curses.endwin()
 		elif (myKeyPress == curses.KEY_RESIZE):
 			screen.erase()
 		elif (myKeyPress != 261 and myKeyPress != 260): ## rt/lt keys
