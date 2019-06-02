@@ -44,6 +44,8 @@ def initDisplay():
 	curses.cbreak() #disable line buffers to run the key press immediately
 	curses.curs_set(0)
 	screen.keypad(1) #enable keyboard use
+	#curses.start_color()
+	#curses.init_pair(1, curses.COLOR_RED, curses.COLOR_WHITE)
 
 def populateDisplay(jsonData):
 
@@ -60,8 +62,8 @@ def populateDisplay(jsonData):
 	headerTextblock(json, maxX, jsonData)
 
 	## body
-	lblHighlight = curses.A_UNDERLINE
-	bodyDisplay(json, maxX, maxY, jsonData, lblHighlight)
+	lblUnderline = curses.A_UNDERLINE
+	bodyDisplay(json, maxX, maxY, jsonData, lblUnderline)
 
 	## footer
 	footerProgressBlock(json, maxX, maxY, jsonData)
@@ -79,10 +81,13 @@ def myMain():
 	escape = False
 	myKeyPress = "n/a"
 
+	lblUnderline = curses.A_UNDERLINE
+	#lblUnderline = curses.color_pair(1)
+	aboutScreen(lblUnderline)
+
 	while (escape == False):
 
 		jsonData =jsonView(json, accumulator, jsonDB)
-
 		populateDisplay(jsonData)
 
 		myKeyPress = screen.getch()
@@ -92,11 +97,13 @@ def myMain():
 		if (myKeyPress == 113):
 			escape = True
 			curses.endwin()
+
 		elif (myKeyPress == curses.KEY_RESIZE):
 			screen.erase()
+
 		elif (myKeyPress != 261 and myKeyPress != 260): ## rt/lt keys
 			screen.erase()
-			controllInstruction()
+			aboutScreen(lblUnderline)
 			screen.getch()
 
 ## Run

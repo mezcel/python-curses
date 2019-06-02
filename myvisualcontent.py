@@ -3,6 +3,9 @@
 
 import textwrap
 
+from cursesmenu import *
+from cursesmenu.items import *
+
 ## my modules
 from mycontrolls import *
 from main import screen
@@ -74,33 +77,33 @@ def myWordWrap(row, sentenceString, maxX):
 
 	screen.addstr(row, 4, wrappedText)
 
-def bodyDisplay(json, maxX, maxY, jsonData, lblHighlight):
+def bodyDisplay(json, maxX, maxY, jsonData, lblStyle):
 
 	labelPadding = 2
 	valuePadding = 4
 
 	row = 4
-	screen.addstr(row, labelPadding, "Mystery Name:", lblHighlight)
+	screen.addstr(row, labelPadding, "Mystery Name:", lblStyle)
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryName'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "Mystery Decade:", lblHighlight )
+	screen.addstr(row, labelPadding, "Mystery Decade:", lblStyle )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mysteryDecade'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "Mystery Message:", lblHighlight )
+	screen.addstr(row, labelPadding, "Mystery Message:", lblStyle )
 	row += 2
 	screen.addstr(row, valuePadding, jsonData['mesageText'] )
 
 	row += 2
-	screen.addstr(row, labelPadding, "Scripture Text:", lblHighlight )
+	screen.addstr(row, labelPadding, "Scripture Text:", lblStyle )
 	row += 2
 	myWordWrap(row, str(jsonData['scriptureText']), maxX)
 
 	row += 4
-	screen.addstr(row, labelPadding, "Prayer Text:", lblHighlight )
+	screen.addstr(row, labelPadding, "Prayer Text:", lblStyle )
 	row += 2
 	myWordWrap(row, str(jsonData['prayerText']), maxX)
 
@@ -154,9 +157,22 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 	volumePercent = int(maxX * mysteryPercent )
 	progressBar( topRow + 6, volumePercent)
 
-def controllInstruction():
 
-	screen.addstr(0, 2, "Instructions:")
-	screen.addstr(2, 2, "* press the right/left arrow keys to navigate forward/reverse.")
-	screen.addstr(3, 2, "* press Q to quit")
-	screen.addstr(5, 2, "(press any key to continue)")
+'''
+### About ##############################################################
+'''
+
+def aboutScreen(lblUnderline):
+
+	maxY, maxX = screen.getmaxyx()
+
+	centerText(1, maxX, "python-curses")
+	screen.addstr(3, 2, "About:", lblUnderline)
+	leftJustifyText(5, "A CLI scriptural Rosary using Python and Curses")
+	leftJustifyText(6, "by Mezcel, https://github.com/mezcel/python-curses.git")
+	screen.addstr(8, 2, "Instructions:", lblUnderline)
+	sentenceString = "Press the right/left arrow keys to navigate forward/reverse. Press Q to quit. The first mystery will correspond with the mystery of the day. Dynamic resize only works on POSIX terminal types like WSL, Xterm or xfce4-terminal."
+	myWordWrap(10, sentenceString, maxX)
+	centerText(maxY - 1, maxX, "(press any key to continue)")
+
+	screen.getch()

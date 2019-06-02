@@ -5,6 +5,8 @@ import json
 import platform
 import datetime
 
+#from myvisualcontent import mysteryMenu
+
 '''
 ### JSON ######################################################
 '''
