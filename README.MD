@@ -14,7 +14,7 @@ import os		## computer control
 import curses		## cli ui
 import json		## json parse
 import datetime		## sys clock
-import textwrap		## wraping centence strings
+import textwrap		## wrapping sentence strings
 import platform		## identify which python version
 ```
 
@@ -31,6 +31,7 @@ sudo apt-get install python-pip python3 python3-pip
 ```
 
 ### Arch
+
 ```sh
 sudo pacman -S --needed python python2
 ```
@@ -42,6 +43,7 @@ I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows
 For runtime convenience, install "with environment variables" selected.
 
 Install curses library:
+
 ```sh
 pip install --upgrade pip
 python -m pip install windows-curses
