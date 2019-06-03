@@ -59,7 +59,7 @@ def headerTextblock(json, maxX, jsonData):
 
 	now = returnDateString()
 
-	leftJustifyText( topPadding, "NAB - English" )
+	leftJustifyText( topPadding, "New American Bible (NAB) - English" )
 	centerText( topPadding, maxX, "Python Terminal Rosary" )
 	rightJustifyText( topPadding, maxX, str(now) )
 	myHR( topPadding + 1, maxX )
@@ -158,6 +158,16 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 ### About ##############################################################
 '''
 
+def titleScreen():
+	maxY, maxX = screen.getmaxyx()
+	firstLine = int((maxY / 2) - 4)
+	centerText(firstLine, maxX, "python-curses")
+	nextLine = firstLine + 2
+	centerText(nextLine, maxX, "A CLI scriptural Rosary using Python and Curses")
+	nextLine = nextLine + 2
+	centerText(nextLine, maxX, "by Mezcel")
+	screen.getch()
+
 def aboutScreen(lblUnderline):
 
 	maxY, maxX = screen.getmaxyx()
@@ -166,10 +176,15 @@ def aboutScreen(lblUnderline):
 	screen.addstr(3, 2, "About:", lblUnderline)
 	leftJustifyText(5, "A CLI scriptural Rosary using Python and Curses")
 	leftJustifyText(6, "by Mezcel, https://github.com/mezcel/python-curses.git")
-	screen.addstr(8, 2, "Instructions:", lblUnderline)
-	sentenceString = "Press the right/left arrow keys to navigate forward/reverse. Press Q to quit. The first mystery will correspond with the mystery of the day. Dynamic resize only works on POSIX terminal types like WSL, Xterm or xfce4-terminal, ect. Minimum terminal: (140x, 40y). Current display: (" + str(maxX) + "x, " + str(maxY) + "y)."
-	myWordWrap(10, sentenceString, maxX)
+
+	screen.addstr(8, 2, "Display:", lblUnderline)
+	leftJustifyText(10, "Dynamic resize primarily works on Linux style POSIX terminal types like WSL, Xterm or xfce4-terminal, ect." )
+	leftJustifyText(11, "Current display: (" + str(maxX) + "x, " + str(maxY) + "y)." + " | Minimum display: (140x, 40y)" )
+	screen.addstr(13, 2, "Instructions:", lblUnderline)
+	leftJustifyText(15, "The first mystery defaults to the mystery of the day." )
+	leftJustifyText(16, "Reset to a desired mystery. Number Keys (1-4) correspond with: Joy, Luminous, Sorrow, & Glory." )
+	leftJustifyText(17, "Press the right/left arrow keys to navigate forward/reverse." )
+	leftJustifyText(18, "Press Q to quit." )
 
 	centerText(maxY - 1, maxX, "(press any key to continue)")
-
 	screen.getch()

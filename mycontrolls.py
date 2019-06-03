@@ -77,6 +77,10 @@ def jsonView(json, accumulator, jsonDB):
 
 def navInput(myKeyPress, accumulatorInput):
 	switcher = {
+		49: 0,
+		50: 79,
+		51: 158,
+		52: 237,
 		261: navFwd(accumulatorInput),	## rt arrow
 		260: navRev(accumulatorInput),	## lt arrow
 	}

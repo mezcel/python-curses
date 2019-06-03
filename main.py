@@ -33,7 +33,6 @@ def minimumResize(maxY, maxX):
 		screen.addstr(5, 2, "Required Minimum Window:" )
 		screen.addstr(5, 30, "140 x 40" )
 		screen.addstr(7, 2, "(press Q to exit)" )
-
 		screen.getch()
 
 def initDisplay():
@@ -79,11 +78,8 @@ def myMain():
 	accumulator = int(mysteryOfDay())
 
 	escape = False
-	myKeyPress = "n/a"
 
-	lblUnderline = curses.A_UNDERLINE
-	#lblUnderline = curses.color_pair(1)
-	aboutScreen(lblUnderline)
+	titleScreen() ## cover page splash
 
 	while (escape == False):
 
@@ -101,10 +97,13 @@ def myMain():
 		elif (myKeyPress == curses.KEY_RESIZE):
 			screen.erase()
 
-		elif (myKeyPress != 261 and myKeyPress != 260): ## rt/lt keys
+		elif (
+			myKeyPress != 261 and myKeyPress != 260 and
+			myKeyPress != 49 and myKeyPress != 50 and myKeyPress != 51 and myKeyPress != 52
+		): ## rt/lt keys
 			screen.erase()
+			lblUnderline = curses.A_UNDERLINE
 			aboutScreen(lblUnderline)
-			screen.getch()
 
 ## Run
 
