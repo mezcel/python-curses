@@ -3,9 +3,6 @@
 
 import textwrap
 
-from cursesmenu import *
-from cursesmenu.items import *
-
 ## my modules
 from mycontrolls import *
 from main import screen
@@ -157,7 +154,6 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 	volumePercent = int(maxX * mysteryPercent )
 	progressBar( topRow + 6, volumePercent)
 
-
 '''
 ### About ##############################################################
 '''
@@ -171,8 +167,9 @@ def aboutScreen(lblUnderline):
 	leftJustifyText(5, "A CLI scriptural Rosary using Python and Curses")
 	leftJustifyText(6, "by Mezcel, https://github.com/mezcel/python-curses.git")
 	screen.addstr(8, 2, "Instructions:", lblUnderline)
-	sentenceString = "Press the right/left arrow keys to navigate forward/reverse. Press Q to quit. The first mystery will correspond with the mystery of the day. Dynamic resize only works on POSIX terminal types like WSL, Xterm or xfce4-terminal."
+	sentenceString = "Press the right/left arrow keys to navigate forward/reverse. Press Q to quit. The first mystery will correspond with the mystery of the day. Dynamic resize only works on POSIX terminal types like WSL, Xterm or xfce4-terminal, ect. Minimum terminal: (140x, 40y). Current display: (" + str(maxX) + "x, " + str(maxY) + "y)."
 	myWordWrap(10, sentenceString, maxX)
+
 	centerText(maxY - 1, maxX, "(press any key to continue)")
 
 	screen.getch()
