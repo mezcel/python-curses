@@ -98,8 +98,9 @@ def myMain():
 			screen.erase()
 
 		elif (
-			myKeyPress != 261 and myKeyPress != 260 and
-			myKeyPress != 49 and myKeyPress != 50 and myKeyPress != 51 and myKeyPress != 52
+			myKeyPress != 261 and myKeyPress != 260 and myKeyPress != 49
+			and myKeyPress != 50 and myKeyPress != 51 and myKeyPress != 52
+			and myKeyPress != 48
 		): ## rt/lt keys
 			screen.erase()
 			lblUnderline = curses.A_UNDERLINE

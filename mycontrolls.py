@@ -81,6 +81,7 @@ def navInput(myKeyPress, accumulatorInput):
 		50: 79,
 		51: 158,
 		52: 237,
+		48: mysteryOfDay(),
 		261: navFwd(accumulatorInput),	## rt arrow
 		260: navRev(accumulatorInput),	## lt arrow
 	}

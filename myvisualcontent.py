@@ -160,7 +160,7 @@ def footerProgressBlock(json, maxX, maxY, jsonData):
 
 def titleScreen():
 	maxY, maxX = screen.getmaxyx()
-	firstLine = int((maxY / 2) - 4)
+	firstLine = int((maxY / 2) - 3)
 	centerText(firstLine, maxX, "python-curses")
 	nextLine = firstLine + 2
 	centerText(nextLine, maxX, "A CLI scriptural Rosary using Python and Curses")
@@ -182,7 +182,7 @@ def aboutScreen(lblUnderline):
 	leftJustifyText(11, "Current display: (" + str(maxX) + "x, " + str(maxY) + "y)." + " | Minimum display: (140x, 40y)" )
 	screen.addstr(13, 2, "Instructions:", lblUnderline)
 	leftJustifyText(15, "The first mystery defaults to the mystery of the day." )
-	leftJustifyText(16, "Reset to a desired mystery. Number Keys (1-4) correspond with: Joy, Luminous, Sorrow, & Glory." )
+	leftJustifyText(16, "Reset to a desired mystery. Number Keys (0-4) correspond with: Daily, Joy, Luminous, Sorrow, & Glory." )
 	leftJustifyText(17, "Press the right/left arrow keys to navigate forward/reverse." )
 	leftJustifyText(18, "Press Q to quit." )
 
