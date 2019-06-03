@@ -37,12 +37,22 @@ sudo pacman -S --needed python python2
 
 ### Win10
 
-I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows/).
+I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows/), but it also works on Python 3.7
 
 For runtime convenience, install "with environment variables" selected.
 
 Install curses library:
-```ps1
+```sh
 pip install --upgrade pip
 python -m pip install windows-curses
 ```
+
+---
+
+## Standalone executable
+
+* [distutils](https://docs.python.org/3/distutils/builtdist.html), python3
+
+* [pyinstaller](https://pypi.org/project/PyInstaller/), linux
+
+* [py2exe](https://pypi.org/project/py2exe/), win10
