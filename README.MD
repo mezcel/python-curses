@@ -5,8 +5,8 @@ Displayed text content is  provided by a .json file.
 
 * Visual layout based on [jq-tput-terminal](https://github.com/mezcel/jq-tput-terminal).
 * Light weight (lighter and less complicated than my other rosary apps)
-    * I did make a modular version of this same app, just for jollies
-    
+    * I did make a [modular-version](https://github.com/mezcel/python-curses/tree/master/module-version) of this same app, just for jollies
+
 ### Libraries used:
 
 ```py
