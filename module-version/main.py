@@ -1,12 +1,12 @@
 ## main.py ##
 
 import os
+import sys
 import curses
 
 ## my modules
 from mycontrolls import *
 from myvisualcontent import *
-from term import opentty, cbreakmode ## pip install term
 
 if (os.name == "posix"):
 	## pip install term, only for unix-like systems
@@ -28,6 +28,9 @@ def minimumResize(maxY, maxX):
 		screen.erase()
 		screen.refresh()'''
 
+		## pip install term, only for unix-like systems
+		from term import opentty, cbreakmode 
+
 		## resize terminal
 		with opentty() as tty:
 			if tty is not None:
@@ -38,16 +41,15 @@ def minimumResize(maxY, maxX):
 					tty.write(newScreenDimentions)
 
 	if (os.name == "nt"):
-		os.system("mode 140, 40") ## Win NT
-		screen.erase()
-		screen.refresh()
-		screen.addstr(1, 2, "Window is too small: ( Restart with a larger window )")
-		screen.addstr(3, 2, "Current Window:" )
-		screen.addstr(3, 30, str(maxX) + " x " + str(maxX) )
-		screen.addstr(5, 2, "Required Minimum Window:" )
-		screen.addstr(5, 30, "140 x 40" )
-		screen.addstr(7, 2, "(press Q to exit)" )
-		screen.getch()
+		#os.system("mode 140, 40") ## Win NT
+		os.system('mode con: cols=140 lines=40')
+		
+		thisDir = str(os.getcwd())
+		thisFile = "main.py"
+		thisFilePath = thisDir + "\\" + thisFile
+		newAppInstance = "python  " + thisFilePath
+		os.system(newAppInstance)
+		sys.exit(0) ## kill this instance of the app
 		
 def initDisplay():
 
