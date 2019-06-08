@@ -28,12 +28,14 @@ There are some differences between Python v2.x and Python v3.x regarding parsing
 
 ```sh
 sudo apt-get install python-pip python3 python3-pip
+pip install term
 ```
 
 ### Arch
 
 ```sh
 sudo pacman -S --needed python python2
+pip install term
 ```
 
 ### Win10
