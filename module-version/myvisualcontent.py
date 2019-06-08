@@ -171,6 +171,8 @@ def titleScreen():
 def aboutScreen(lblUnderline):
 
 	maxY, maxX = screen.getmaxyx()
+	screen.addstr(0, 0, '')
+	screen.clrtobot()
 
 	centerText(1, maxX, "python-curses")
 	screen.addstr(3, 2, "About:", lblUnderline)

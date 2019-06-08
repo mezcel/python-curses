@@ -6,6 +6,7 @@ import curses
 ## my modules
 from mycontrolls import *
 from myvisualcontent import *
+from term import opentty, cbreakmode ## pip install term
 
 ## global vars
 accumulator = 0
@@ -18,7 +19,7 @@ screen = curses.initscr() #initialize the curses window
 
 def minimumResize(maxY, maxX):
 
-	if (os.name == "posix"):
+	'''if (os.name == "posix"):
 		os.system("resize -s 40 140") ## Linux
 		screen.erase()
 		screen.refresh()
@@ -33,7 +34,16 @@ def minimumResize(maxY, maxX):
 		screen.addstr(5, 2, "Required Minimum Window:" )
 		screen.addstr(5, 30, "140 x 40" )
 		screen.addstr(7, 2, "(press Q to exit)" )
-		screen.getch()
+		screen.getch()'''
+		
+	## resize terminal
+	with opentty() as tty:
+		if tty is not None:
+			with cbreakmode(tty, min=0):
+				ttyWidth=140
+				ttyHeight=40
+				newScreenDimentions = '\033[8;' + str(ttyHeight) + ';' + str(ttyWidth) + 't'
+				tty.write(newScreenDimentions)
 
 def initDisplay():
 

@@ -7,6 +7,8 @@ import platform
 import datetime
 import textwrap
 
+from term import opentty, cbreakmode ## pip install term
+
 ## global vars
 accumulator = 0
 
@@ -294,6 +296,8 @@ def titleScreen():
 def aboutScreen(lblUnderline):
 
 	maxY, maxX = screen.getmaxyx()
+	screen.addstr(0, 0, '')
+	screen.clrtobot()
 
 	centerText(1, maxX, "python-curses")
 	screen.addstr(3, 2, "About:", lblUnderline)
@@ -318,7 +322,7 @@ def aboutScreen(lblUnderline):
 
 def minimumResize(maxY, maxX):
 
-	if (os.name == "posix"):
+	'''if (os.name == "posix"):
 		os.system("resize -s 40 140") ## Linux
 		screen.erase()
 		screen.refresh()
@@ -333,7 +337,16 @@ def minimumResize(maxY, maxX):
 		screen.addstr(5, 2, "Required Minimum Window:" )
 		screen.addstr(5, 30, "140 x 40" )
 		screen.addstr(7, 2, "(press Q to exit)" )
-		screen.getch()
+		screen.getch()'''
+		
+	## resize terminal
+	with opentty() as tty:
+		if tty is not None:
+			with cbreakmode(tty, min=0):
+				ttyWidth=140
+				ttyHeight=40
+				newScreenDimentions = '\033[8;' + str(ttyHeight) + ';' + str(ttyWidth) + 't'
+				tty.write(newScreenDimentions)
 
 def initDisplay():
 
