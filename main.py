@@ -7,7 +7,9 @@ import platform
 import datetime
 import textwrap
 
-from term import opentty, cbreakmode ## pip install term
+if (os.name == "posix"):
+	## pip install term, only for unix-like systems
+	from term import opentty, cbreakmode 
 
 ## global vars
 accumulator = 0
@@ -322,10 +324,22 @@ def aboutScreen(lblUnderline):
 
 def minimumResize(maxY, maxX):
 
-	'''if (os.name == "posix"):
-		os.system("resize -s 40 140") ## Linux
+	if (os.name == "posix"):
+		'''os.system("resize -s 40 140") ## Linux
 		screen.erase()
-		screen.refresh()
+		screen.refresh()'''
+
+		## pip install term, only for unix-like systems
+		from term import opentty, cbreakmode 
+
+		## resize terminal
+		with opentty() as tty:
+			if tty is not None:
+				with cbreakmode(tty, min=0):
+					ttyWidth=140
+					ttyHeight=40
+					newScreenDimentions = '\033[8;' + str(ttyHeight) + ';' + str(ttyWidth) + 't'
+					tty.write(newScreenDimentions)
 
 	if (os.name == "nt"):
 		os.system("mode 140, 40") ## Win NT
@@ -337,17 +351,8 @@ def minimumResize(maxY, maxX):
 		screen.addstr(5, 2, "Required Minimum Window:" )
 		screen.addstr(5, 30, "140 x 40" )
 		screen.addstr(7, 2, "(press Q to exit)" )
-		screen.getch()'''
+		screen.getch()
 		
-	## resize terminal
-	with opentty() as tty:
-		if tty is not None:
-			with cbreakmode(tty, min=0):
-				ttyWidth=140
-				ttyHeight=40
-				newScreenDimentions = '\033[8;' + str(ttyHeight) + ';' + str(ttyWidth) + 't'
-				tty.write(newScreenDimentions)
-
 def initDisplay():
 
 	#screen = curses.initscr() #initialize the curses window
