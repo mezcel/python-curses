@@ -10,7 +10,7 @@ from myvisualcontent import *
 
 if (os.name == "posix"):
 	## pip install term, only for unix-like systems
-	from term import opentty, cbreakmode 
+	from term import opentty, cbreakmode
 
 ## global vars
 accumulator = 0
@@ -29,7 +29,7 @@ def minimumResize(maxY, maxX):
 		screen.refresh()'''
 
 		## pip install term, only for unix-like systems
-		from term import opentty, cbreakmode 
+		from term import opentty, cbreakmode
 
 		## resize terminal
 		with opentty() as tty:
@@ -43,14 +43,14 @@ def minimumResize(maxY, maxX):
 	if (os.name == "nt"):
 		#os.system("mode 140, 40") ## Win NT
 		os.system('mode con: cols=140 lines=40')
-		
+
 		thisDir = str(os.getcwd())
 		thisFile = "main.py"
 		thisFilePath = thisDir + "\\" + thisFile
 		newAppInstance = "python  " + thisFilePath
 		os.system(newAppInstance)
 		sys.exit(0) ## kill this instance of the app
-		
+
 def initDisplay():
 
 	#screen = curses.initscr() #initialize the curses window
@@ -116,7 +116,8 @@ def myMain():
 		elif (
 			myKeyPress != 261 and myKeyPress != 260 and myKeyPress != 49
 			and myKeyPress != 50 and myKeyPress != 51 and myKeyPress != 52
-			and myKeyPress != 48
+			and myKeyPress != 48 and myKeyPress != 100 and myKeyPress != 108
+			and myKeyPress != 97 and myKeyPress != 104
 		): ## rt/lt keys
 			screen.erase()
 			lblUnderline = curses.A_UNDERLINE

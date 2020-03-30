@@ -177,7 +177,7 @@ def aboutScreen(lblUnderline):
 	centerText(1, maxX, "python-curses")
 	screen.addstr(3, 2, "About:", lblUnderline)
 	leftJustifyText(5, "A CLI scriptural Rosary using Python and Curses")
-	leftJustifyText(6, "by Mezcel, https://github.com/mezcel/python-curses.git")
+	leftJustifyText(6, "\tby Mezcel, https://github.com/mezcel/python-curses.git")
 
 	screen.addstr(8, 2, "Display:", lblUnderline)
 	leftJustifyText(10, "Dynamic resize primarily works on Linux style POSIX terminal types like WSL, Xterm or xfce4-terminal, ect." )
@@ -186,7 +186,10 @@ def aboutScreen(lblUnderline):
 	leftJustifyText(15, "The first mystery defaults to the mystery of the day." )
 	leftJustifyText(16, "Reset to a desired mystery. Number Keys (0-4) correspond with: Daily, Joy, Luminous, Sorrow, & Glory." )
 	leftJustifyText(17, "Press the right/left arrow keys to navigate forward/reverse." )
-	leftJustifyText(18, "Press Q to quit." )
+	leftJustifyText(18, "\tthe h/l vim keys to navigate forward/reverse." )
+	leftJustifyText(19, "\tthe a/d game arrow keys to navigate forward/reverse." )
+	leftJustifyText(20, "Number keys 0-4 will jump to a mystery, 0 is the mystery of the day." )
+	leftJustifyText(21, "Press Q to quit." )
 
 	centerText(maxY - 1, maxX, "(press any key to continue)")
 	screen.getch()

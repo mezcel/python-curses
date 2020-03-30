@@ -77,13 +77,19 @@ def jsonView(json, accumulator, jsonDB):
 
 def navInput(myKeyPress, accumulatorInput):
 	switcher = {
-		49: 0,
-		50: 79,
-		51: 158,
-		52: 237,
-		48: mysteryOfDay(),
+		## jump to mystery using numbers
+		48: mysteryOfDay(), ## 0
+		49: 0,				## 1
+		50: 79,				## 2
+		51: 158,			## 3
+		52: 237,			## 4
+		## forward and reverse navigation
 		261: navFwd(accumulatorInput),	## rt arrow
+		108: navFwd(accumulatorInput),	## vim l
+		100: navFwd(accumulatorInput),	## game d
 		260: navRev(accumulatorInput),	## lt arrow
+		104: navRev(accumulatorInput),	## vim h
+		97: navRev(accumulatorInput),	## game a
 	}
 
 	return switcher.get(myKeyPress, accumulatorInput)

@@ -10,7 +10,7 @@ import textwrap
 
 if (os.name == "posix"):
 	## pip install term, only for unix-like systems
-	from term import opentty, cbreakmode 
+	from term import opentty, cbreakmode
 
 ## global vars
 accumulator = 0
@@ -88,13 +88,19 @@ def jsonView(json, accumulator, jsonDB):
 
 def navInput(myKeyPress, accumulatorInput):
 	switcher = {
-		49: 0,
-		50: 79,
-		51: 158,
-		52: 237,
-		48: mysteryOfDay(),
+		## jump to mystery using numbers
+		48: mysteryOfDay(), ## 0
+		49: 0,				## 1
+		50: 79,				## 2
+		51: 158,			## 3
+		52: 237,			## 4
+		## forward and reverse navigation
 		261: navFwd(accumulatorInput),	## rt arrow
+		108: navFwd(accumulatorInput),	## vim l
+		100: navFwd(accumulatorInput),	## game d
 		260: navRev(accumulatorInput),	## lt arrow
+		104: navRev(accumulatorInput),	## vim h
+		97: navRev(accumulatorInput),	## game a
 	}
 
 	return switcher.get(myKeyPress, accumulatorInput)
@@ -305,7 +311,7 @@ def aboutScreen(lblUnderline):
 	centerText(1, maxX, "python-curses")
 	screen.addstr(3, 2, "About:", lblUnderline)
 	leftJustifyText(5, "A CLI scriptural Rosary using Python and Curses")
-	leftJustifyText(6, "by Mezcel, https://github.com/mezcel/python-curses.git")
+	leftJustifyText(6, "\tby Mezcel, https://github.com/mezcel/python-curses.git")
 
 	screen.addstr(8, 2, "Display:", lblUnderline)
 	leftJustifyText(10, "Dynamic resize primarily works on Linux style POSIX terminal types like WSL, Xterm or xfce4-terminal, ect." )
@@ -314,7 +320,10 @@ def aboutScreen(lblUnderline):
 	leftJustifyText(15, "The first mystery defaults to the mystery of the day." )
 	leftJustifyText(16, "Reset to a desired mystery. Number Keys (0-4) correspond with: Daily, Joy, Luminous, Sorrow, & Glory." )
 	leftJustifyText(17, "Press the right/left arrow keys to navigate forward/reverse." )
-	leftJustifyText(18, "Press Q to quit." )
+	leftJustifyText(18, "\tthe h/l vim keys to navigate forward/reverse." )
+	leftJustifyText(19, "\tthe a/d game arrow keys to navigate forward/reverse." )
+	leftJustifyText(20, "Number keys 0-4 will jump to a mystery, 0 is the mystery of the day." )
+	leftJustifyText(21, "Press Q to quit." )
 
 	centerText(maxY - 1, maxX, "(press any key to continue)")
 	screen.getch()
@@ -331,7 +340,7 @@ def minimumResize(maxY, maxX):
 		screen.refresh()'''
 
 		## pip install term, only for unix-like systems
-		from term import opentty, cbreakmode 
+		from term import opentty, cbreakmode
 
 		## resize terminal
 		with opentty() as tty:
@@ -345,14 +354,14 @@ def minimumResize(maxY, maxX):
 	if (os.name == "nt"):
 		#os.system("mode 140, 40") ## Win NT
 		os.system('mode con: cols=140 lines=40')
-		
+
 		thisDir = str(os.getcwd())
 		thisFile = "main.py"
 		thisFilePath = thisDir + "\\" + thisFile
 		newAppInstance = "python  " + thisFilePath
 		os.system(newAppInstance)
 		sys.exit(0) ## kill this instance of the app
-		
+
 def initDisplay():
 
 	#screen = curses.initscr() #initialize the curses window
@@ -418,7 +427,8 @@ def myMain():
 		elif (
 			myKeyPress != 261 and myKeyPress != 260 and myKeyPress != 49
 			and myKeyPress != 50 and myKeyPress != 51 and myKeyPress != 52
-			and myKeyPress != 48
+			and myKeyPress != 48 and myKeyPress != 100 and myKeyPress != 108
+			and myKeyPress != 97 and myKeyPress != 104
 		): ## rt/lt keys
 			screen.erase()
 			lblUnderline = curses.A_UNDERLINE
