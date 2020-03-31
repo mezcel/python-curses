@@ -10,7 +10,26 @@ import textwrap
 
 if (os.name == "posix"):
 	## pip install term, only for unix-like systems
+	try:
+		import term
+	except ImportError:
+		## Debian
+		## sudo apt-get install python-pip python3 python3-pip
+		## Arch
+		## sudo pacman -S --needed python python2
+		print "Attempt to install the \"term\" python package."
+		os.system("python -m pip install term")
+	
 	from term import opentty, cbreakmode
+
+if (platform.system() == "Windows"):
+	print "windows check ..."
+	try:
+		import curses
+	except ImportError:
+		print "Attempt to install the \"windows-curses\" python package."
+		os.system("python -m pip install windows-curses")
+		import curses
 
 ## global vars
 accumulator = 0
