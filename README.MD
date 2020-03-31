@@ -27,14 +27,20 @@ There are some differences between Python v2.x and Python v3.x regarding parsing
 ### Debian & WLS
 
 ```sh
+## Linux package
 sudo apt-get install python-pip python3 python3-pip
+
+## python package
 pip install term
 ```
 
 ### Arch
 
 ```sh
+## Linux package
 sudo pacman -S --needed python python2
+
+## python package
 pip install term
 ```
 
@@ -47,13 +53,22 @@ For runtime convenience, install "with environment variables" selected.
 Install curses library:
 
 ```sh
+## python package
 pip install --upgrade pip
 python -m pip install windows-curses
 ```
 
 ---
 
-## Standalone executable
+## Demo
+
+[Animated Demo](https://asciinema.org/a/315411)
+
+[![asciicast](https://asciinema.org/a/315411.svg)](https://asciinema.org/a/315411)
+
+---
+
+## Package a standalone executable
 
 * [distutils](https://docs.python.org/3/distutils/builtdist.html), python3
 
