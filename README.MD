@@ -1,11 +1,11 @@
 # python-curses
 
-A Python CLI/terminal application which cycles through a scriptural Rosary.
-Displayed text content is  provided by a .json file.
+A Python CLI/terminal application which cycles through a scriptural Rosary. Displayed text content is  provided by a .json file.
+* Scripture quotes are taken from [usccb.org](http://usccb.org/bible/books-of-the-bible/index.cfm). Text readings are stored within the ```module-version/rosaryJSON-nab.json``` file.
 
-* Visual layout based on [jq-tput-terminal](https://github.com/mezcel/jq-tput-terminal).
+* Visual UI/UX layout based on [jq-tput-terminal](https://github.com/mezcel/jq-tput-terminal).
 * Light weight (lighter and less complicated than my other rosary apps)
-    * I did make a [modular-version](https://github.com/mezcel/python-curses/tree/master/module-version) of this same app, just for jollies
+    * I did make a [modular-version](https://github.com/mezcel/python-curses/tree/master/module-version) of this same app, just for jollies and compartmentalization of imported python library packages.
 
 ### Libraries used:
 
