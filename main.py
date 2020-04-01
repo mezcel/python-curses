@@ -2,32 +2,31 @@
 
 import os
 import sys
-import curses
 import json
 import platform
 import datetime
 import textwrap
 
+## pip install term, only for unix-like systems
 if (os.name == "posix"):
-	## pip install term, only for unix-like systems
 	try:
 		import term
 	except ImportError:
-		## Debian
-		## sudo apt-get install python-pip python3 python3-pip
-		## Arch
-		## sudo pacman -S --needed python python2
-		print "Attempt to install the \"term\" python package."
+		## Debian: sudo apt-get install python-pip python3 python3-pip
+		## Arch: sudo pacman -S --needed python python2
 		os.system("python -m pip install term")
 	
 	from term import opentty, cbreakmode
 
-if (platform.system() == "Windows"):
-	print "windows check ..."
-	try:
+## import curses
+try:
+	import curses
+except ImportError:
+	if (platform.system() == "Linux"):
+		os.system("python -m pip install curses")
 		import curses
-	except ImportError:
-		print "Attempt to install the \"windows-curses\" python package."
+	elif (platform.system() == "Windows"):
+		os.system("pip install --upgrade pip")
 		os.system("python -m pip install windows-curses")
 		import curses
 

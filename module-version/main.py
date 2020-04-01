@@ -2,14 +2,31 @@
 
 import os
 import sys
-import curses
+import platform
+#import curses
+try:
+	import curses
+except ImportError:
+	if (platform.system() == "Linux"):
+		os.system("python -m pip install curses")
+		import curses
+	elif (platform.system() == "Windows"):
+		os.system("pip install --upgrade pip")
+		os.system("python -m pip install windows-curses")
+		import curses
 
 ## my modules
 from mycontrolls import *
 from myvisualcontent import *
 
 if (os.name == "posix"):
-	## pip install term, only for unix-like systems
+	try:
+		import term
+	except ImportError:
+		## Debian: sudo apt-get install python-pip python3 python3-pip
+		## Arch: sudo pacman -S --needed python python2
+		os.system("python -m pip install term")
+	
 	from term import opentty, cbreakmode
 
 ## global vars
