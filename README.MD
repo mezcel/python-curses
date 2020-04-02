@@ -22,6 +22,8 @@ import platform		## identify which python version
 
 ## Install Python Platform
 
+[https://www.python.org/downloads](https://www.python.org/downloads/)
+
 There are some differences between Python v2.x and Python v3.x regarding parsing ```.json```, so I included both techniques within the code.
 
 ### Debian & WLS
@@ -46,7 +48,7 @@ pip install term
 
 ### Win10
 
-I just use Python 2.7 from [python.org](https://www.python.org/downloads/windows/), but it also works on Python 3.7
+I just use [Python 2.7.x](https://www.python.org/downloads/release/python-2717/) from [python.org](https://www.python.org/downloads/windows/), but it also works on the latest Python 3.7.x
 
 For runtime convenience, install "with environment variables" selected.
 
