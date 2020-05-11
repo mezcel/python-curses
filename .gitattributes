@@ -1,0 +1,7 @@
+## win10 line endins
+*.bat eol=crlf
+*.ps1 eol=crlf
+
+## Linux/Posix line endins
+*.sh eol=lf
+Makefile eol=lf
